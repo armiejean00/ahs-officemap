@@ -29,7 +29,7 @@
             <li> <a href="#team">Our Team</a></li>
         </ul>
         <div class="header-icon" style="background-color:#08C6AB;border-radius:5px">
-            <a href="/users/register" style="font-size: 15px;margin:5px;color:black;">Get Started</a>
+            <a href="/users/sign_in" style="font-size: 15px;margin:5px;color:black;">Get Started</a>
 
 
 
