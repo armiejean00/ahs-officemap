@@ -15,12 +15,10 @@
         {{-- Flex Container --}}
         <div class="flex items-center justify-between">
             {{-- Logo --}}
-            <a href="/" class="pt-2">
-                <h1 class="font-bold text-2xl text-congressBlue lg:text-3xl">
-                    <img class="display: inline-block h-8 pb-2 lg:h-10 lg:pb-3" src="{{ asset('images/ahs-ape.svg') }}"
-                        alt="A">pexHubSpot
-                </h1>
-            </a>
+            <a href="#" class="logo" >
+              <img src="{{ asset('images/ahs-logo.svg') }}" alt="" style="height:50px">
+        </a>
+        
 
         </div>
     </nav>
@@ -30,6 +28,7 @@
             <h2 class="text-base mb-5">
                 Your account is on hold or not approved. Please contact your administrator to give you access.
             </h2>
+            
             <a href="/"
                 class="p-3 px-6 pt-2 text-white bg-congressBlue hover:bg-cornflowerBlue rounded-full baseline text-lg lg:text-xl">
                 Back

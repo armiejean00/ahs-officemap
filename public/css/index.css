@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&display=swap');
+@import url('/font-awesome-4.6.3/css/font-awesome.min.css');
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -9,6 +10,7 @@
     scroll-behavior: smooth;
     list-style: none;
     text-decoration: none;
+   
 
 
 
@@ -61,6 +63,9 @@ header.shadow {
 .logo img {
     width: 90px
 }
+.logolanding {
+    width: 90px
+}
 
 .navbar {
     display: flex;
@@ -75,7 +80,7 @@ header.shadow {
 }
 
 .navbar a:hover {
-    background: var(--main-color);
+    background: #08C6AB;
     border-radius: 0.2rem;
     transition: 0.2s all linear;
 }
@@ -113,7 +118,7 @@ header.shadow {
 .home {
     width: 100%;
     min-height: 100vh;
-    background: url(../img/bg.jpg);
+    background: url(../images/black.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -125,14 +130,14 @@ header.shadow {
 
 .home-text h1 {
     font-size: 3rem;
-    color: var(--main-color);
+    color: white;
     align-self: center;
     letter-spacing: 1px;
     text-align: center;
 }
 
 .home-text p {
-    font-size: 0.939rem;
+    font-size: 1.1rem;
     color: var(--bg-color);
     margin: 0.5rem 0 1.4rem;
     text-align: center;
@@ -472,3 +477,54 @@ header.shadow {
         font-size: 1.2rem;
     }
 }
+
+
+
+
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    /* Set the color of the text */
+    font-size: 25px;
+    /* Set the font size of the text */
+    text-align: center;
+    /* Center the text horizontally */
+    z-index: 1;
+}
+.logo {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    /* Set the color of the text */
+    font-size: 25px;
+    /* Set the font size of the text */
+    text-align: center;
+    /* Center the text horizontally */
+    z-index: 1;
+}
+.formreg{
+    margin-top:140px;
+    margin-left:10px
+}
+
+.welcome {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+   
+    /* Set the font size of the text */
+    text-align: center;
+    /* Center the text horizontally */
+    z-index: 1;
+}
+
+
+

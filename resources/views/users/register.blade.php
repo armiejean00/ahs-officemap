@@ -6,97 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Create an Account - AHS</title>
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/reg.css') --}}
+      <link rel="stylesheet"  href="{{asset('css/index.css')}}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
 </head>
 
 <body class="font-semibold">
     {{-- NavBar --}}
-    <nav class="relative container mx-auto p-4 text-center md:p-6">
-        {{-- Flex Container --}}
-        <div class="flex items-center justify-between">
-            {{-- Logo --}}
-            <a href="/" class="pt-2">
-                <h1 class="font-bold text-2xl text-congressBlue lg:text-3xl">
-                    <img class="display: inline-block h-8 pb-2 lg:h-10 lg:pb-3" src="{{ asset('images/ahs-ape.svg') }}"
-                        alt="A">pexHubSpot
-                </h1>
-            </a>
+    
+<div style="width: 50%; float:left;height:100vh">
 
-            {{-- Button --}}
-            <a href="/users/sign_in"
-                class="p-3 px-6 pt-2 text-white bg-congressBlue hover:bg-cornflowerBlue rounded-full baseline text-lg lg:text-xl">
-                Sign In
-            </a>
-        </div>
-    </nav>
+ <a href="#" class="logo">
+              <img src="{{ asset('images/ahs-logo.svg') }}" alt="">
+        </a>
+        
+       <p class="center">Where Flexibility Meets <br> Productivity in Every Seat.</p>
+        <img src="{{ asset('images/hotdesking.jpg') }}" alt="" style="height:100vh;opacity:0.8">
+       
+     
 
-    <section>
-        <div class="container mx-auto w-auto mb-5 rounded-md text-center md:bg-slate-300 md:shadow-xl md:p-4 md:w-96">
-            <h2 class="text-base uppercase">
-                create an account
-            </h2>
-            <form method="POST" action="/register">
+
+</div>
+
+<div style="width: 50%; float:right;background-color: #37465B;height:100vh">
+ <section > 
+      
+        <div> 
+          
+<div class=welcome>
+            <h1 class="text-base uppercase" style="color:#5AFFE7;font-size:35px;">
+              WELCOME!
+            </h1>
+            <p style="margin-left:17px">READY TO JOIN?</p>
+
+</div>
+            <form method="POST" action="/register" class="formreg">
                 @csrf
-                <label for="username">
-                    <p class="mt-3 md:text-left">Username</p>
-                </label>
-                <input type="text" name="username" placeholder="Username" value="{{ old('username') }}"
-                class="bg-slate-300 p-2 w-64 rounded-md focus:border-2 focus:border-black md:bg-white md:w-80">
-                @error('username')
-                <p class="text-red-700 text-sm mt-1 md:text-left">{{ $message }}</p>
-                @enderror
+                
+             <div style="font-size:8px; margin-bottom:10px">
+                        <div style="position:relative;">
+                            <i class="fa fa-user-circle-o" style="position:absolute;top:11px;left:10px;color:#6b6767;font-size:13px"></i>
+                            <input type="text" name="username" placeholder="Username" value="{{ old('username') }}" style="padding:8px;border-radius:10px;border:none;width:450px;padding-left:28px;">
+                        </div>
+                        @error('username')
+                        <p style="color:rgb(233, 54, 54);font-size:12px">{{ $message }}</p>
+                        @enderror
+                    </div>
+               
 
-                <label for="first_name">
-                    <p class="mt-3 md:text-left">First Name</p>
-                </label>
+              <div style="font-size:8px;margin-bottom:10px"> 
+  <div style="position:relative;">
+                            <i class="fa fa-user" style="position:absolute;top:11px;left:10px;color:#6b6767;font-size:15px"></i>
                 <input type="text" name="first_name" placeholder="First Name" value="{{ old('first_name') }}"
-                class="bg-slate-300 p-2 w-64 rounded-md focus:border-2 focus:border-black md:bg-white md:w-80"><br>
+               style="padding:8px;border-radius:10px;border:none;width:450px;padding-left:28px;"><br>
+</div>
                 @error('first_name')
-                <p class="text-red-700 text-sm mt-1 md:text-left">{{ $message }}</p>
+                <p style="color:rgb(233, 54, 54);font-size:12px">{{ $message }}</p>
                 @enderror
-
-                <label for="last_name">
-                    <p class="mt-3 md:text-left">Last Name</p>
-                </label>
+</div>
+             <div style="font-size:8px;margin-bottom:10px"> 
+ <div style="position:relative;">
+                            <i class="fa fa-user" style="position:absolute;top:11px;left:10px;color:#6b6767;font-size:15px"></i>
                 <input type="text" name="last_name" placeholder="Last Name" value="{{ old('last_name') }}"
-                class="bg-slate-300 p-2 w-64 rounded-md focus:border-2 focus:border-black md:bg-white md:w-80"><br>
+              style="padding:8px;border-radius:10px;border:none;width:450px;padding-left:28px;" ><br>
+</div>
                 @error('last_name')
-                <p class="text-red-700 text-sm mt-1 md:text-left">{{ $message }}</p>
+                <p style="color:rgb(233, 54, 54);font-size:12px">{{ $message }}</p>
                 @enderror
-
-                <label for="email">
-                    <p class="mt-3 md:text-left">Email</p>
-                </label>
+</div>
+ <div style="font-size:8px;margin-bottom:10px"> 
+               <div style="position:relative;">
+                            <i class="fa fa-envelope" style="position:absolute;top:11px;left:10px;color:#6b6767;font-size:13px"></i>
                 <input type="email" name="email" placeholder="Email" value="{{ old('email') }}"
-                class="bg-slate-300 p-2 w-64 rounded-md focus:border-2 focus:border-black md:bg-white md:w-80"><br>
+              style="padding:8px;border-radius:10px;border:none;width:450px;padding-left:28px;" ><br>
+</div>
                 @error('email')
-                <p class="text-red-700 text-sm mt-1 md:text-left">{{ $message }}</p>
+                <p style="color:rgb(233, 54, 54);font-size:12px">{{ $message }}</p>
                 @enderror
-
-                <label for="password">
-                    <p class="mt-3 md:text-left">Password</p>
-                </label>
+</div>
+              <div style="font-size:8px;margin-bottom:10px"> 
+ <div style="position:relative;">
+                            <i class="fa fa-lock" style="position:absolute;top:11px;left:10px;color:#6b6767;font-size:15px"></i>
                 <input type="password" name="password" placeholder="Password"  value="{{ old('password') }}"
-                class="bg-slate-300 p-2 w-64 rounded-md focus:border-2 focus:border-black md:bg-white md:w-80"><br>
+               style="padding:8px;border-radius:10px;border:none;width:450px;padding-left:28px;"><br>
+</div>
                 @error('password')
-                <p class="text-red-700 text-sm mt-1 md:text-left">{{ $message }}</p>
+                <p style="color:rgb(233, 54, 54);font-size:12px">{{ $message }}</p>
                 @enderror
 
-                <label for="password_confirmation">
-                    <p class="mt-3 md:text-left">Confirm Password</p>
-                </label>
+                </div>
+ <div style="font-size:8px;margin-bottom:10px"> 
+ <div style="position:relative;">
+                            <i class="fa fa-lock" style="position:absolute;top:11px;left:10px;color:#6b6767;font-size:15px"></i>
                 <input type="password" name="password_confirmation" placeholder="Confirm Password"
-                class="bg-slate-300 p-2 w-64 rounded-md focus:border-2 focus:border-black md:bg-white md:w-80"><br>
+               style="padding:8px;border-radius:10px;border:none;width:450px;padding-left:28px;"><br>
+</div>
 
-                <input type="submit" name="submit" value="JOIN"
-                    class="p-2 mt-5 w-64 rounded-md text-white bg-congressBlue hover:cursor-pointer hover:bg-cornflowerBlue md:w-80">
+</div>
+<div style="margin-left:80px">
+ <div style="font-size:8px;margin-bottom:10px"> 
+
+                <input type="submit" name="submit" value="Sign up" style="background-color: #212B38;cursor:pointer;padding:8px 100px;color:white;font-size:12px;border-radius:10px">
+            </div>    
             </form>
-            <p class="mt-2">
+
+            <p class="mt-2" style="color:white;font-size:12px;margin-left:30px">
                 Already have an account?
-                <a href="/users/sign_in" class="underline text-congressBlue hover:text-cornflowerBlue">Sign In</a>
+                <a href="/users/sign_in" style="color:#5AFFE7;">Sign In</a>
             </p>
+
+</div>
+
         </div>
     </section>
+</div>
+   
 </body>
 
 </html>

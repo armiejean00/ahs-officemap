@@ -125,7 +125,7 @@
                         <ul class="todo-list mb-3">
                             <p class="font-bold" style="display: inline">Desk Number:</p><br>
                             <select name="desk_number" class="p-1 border-2 rounded-2xl active:rounded-2xl">
-                                @for ($i = 1; $i <= 33; $i++)
+                                @for ($i = 1; $i <= 56; $i++)
                                     <option value="{{ $i }}">{{ $i }}</option>
                                 @endfor
                             </select>
